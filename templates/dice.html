@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dice Game</title>
+</head>
+<body>
+
+<h1>Dice Game</h1>
+
+<p><strong>Turn:</strong> {{ turn }}</p>
+<p><strong>Point:</strong> {{ point }}</p>
+<p><strong>Result:</strong> {{ result }}</p>
+
+{% if not finished %}
+<form method="post">
+    <label>Enter dice roll (2–12):</label>
+    <input type="number" name="roll" min="2" max="12" required>
+    <button type="submit">Roll Dice</button>
+</form>
+{% endif %}
+
+<form method="post">
+    <button type="submit" name="new_game">Start New Game</button>
+</form>
+
+</body>
+</html>
